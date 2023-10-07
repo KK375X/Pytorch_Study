@@ -81,7 +81,7 @@ if __name__ == '__main__':
             # 前馈计算
             y_pred = model(inputs)
             loss = criterion(y_pred, labels)
-            print(f'epoch = {epoch}, i = {i}, loss.item() = {loss.item():.3f}')
+            print(f'epoch = {epoch + 1}, i = {i}, loss = {loss.item():.3f}')
 
             # 反向传播
             optimizer.zero_grad()
