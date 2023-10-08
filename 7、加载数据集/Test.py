@@ -20,6 +20,7 @@ class DiabetesDataset(Dataset):
     def __getitem__(self, index):
         return self.x_data[index], self.y_data[index]
 
+    # 返回数据集中样本总数
     def __len__(self):
         return self.len
 
@@ -73,7 +74,7 @@ optimizer = torch.optim.SGD(model.parameters(), lr=0.01)
 if __name__ == '__main__':
     # 外层循环对 min-batch 的数量进行迭代
     for epoch in range(10):
-        # 内层循环对 min-batch 中的样本进行迭代，参数中的 0 表示每次都从 min-batch 数据集中下表为 0 的位置进行迭代
+        # 内层循环对 min-batch 中的样本进行迭代，参数中的 0 表示每次都从 min-batch 数据集中下标为 0 的位置进行迭代
         for i, data in enumerate(train_loader, 0):
             # 将需要输入的 inputs 和标签 labels 从 data 数据集中取出来
             inputs, labels = data
