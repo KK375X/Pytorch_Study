@@ -19,8 +19,10 @@ transform = transforms.Compose([
 
 """
 加载数据集
+自己的电脑：D:/MyProjects/Pytorch/Dataset/MNIST/
+工位：D:/MyProject/Pytorch/Dataset/MNIST/
 """
-train_dataset = datasets.MNIST(root='D:/MyProject/Pytorch/Dataset/MNIST/',
+train_dataset = datasets.MNIST(root='D:/MyProjects/Pytorch/Dataset/MNIST/',
                                train=True,
                                download=True,
                                transform=transform)
