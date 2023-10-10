@@ -22,7 +22,7 @@ transform = transforms.Compose([
 自己的电脑：D:/MyProjects/Pytorch/Dataset/MNIST/
 工位：D:/MyProject/Pytorch/Dataset/MNIST/
 """
-train_dataset = datasets.MNIST(root='D:/MyProjects/Pytorch/Dataset/MNIST/',
+train_dataset = datasets.MNIST(root='D:/MyProject/Pytorch/Dataset/MNIST/',
                                train=True,
                                download=True,
                                transform=transform)
@@ -68,7 +68,7 @@ model = Net()
 
 # 交叉熵损失函数
 criterion = torch.nn.CrossEntropyLoss()
-# 梯度下降部分，momentum=0.5 表示带冲量的优化器，优化训练过程
+# 随机梯度下降 SGD 优化器，momentum=0.5 表示带冲量的优化器，优化训练过程
 optimizer = optim.SGD(model.parameters(), lr=0.01, momentum=0.5)
 
 """
@@ -121,6 +121,6 @@ def test():
 
 
 if __name__ == "__main__":
-    for epoch in range(10):
+    for epoch in range(5):
         train(epoch)
         test()
