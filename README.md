@@ -14,3 +14,6 @@ os.environ['KMP_DUPLICATE_LIB_OK'] = 'True'
 > 
 >如果是在某个env(例如名为work)下：删除…\Anaconda3\envs\work\Library\bin\libiomp5md.dll
 
+
+### 如何使用 CUDA 加速
+> 参考这个代码 9、卷积神经网络CNN/基础篇/Test.py
